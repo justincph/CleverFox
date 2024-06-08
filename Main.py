@@ -10,7 +10,7 @@ def chat(prompt, text, tmpr, max):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "user", "content": rf"Give me the function of generative dictionary, I need the definition of the word in the sentence I give you. Also, I need a sentence including the word.{prompt}"},
+            {"role": "user", "content": rf"Give me the function of generative dictionary, and use the function to provide me the definition of the word in the sentence I give you. Also, I need a sentence including the word.{prompt}"},
         ],  # 提示(promp)
         temperature=float(tmpr),
         max_tokens=int(max),
